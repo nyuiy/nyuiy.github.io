@@ -23,9 +23,9 @@ body {
 
 .nav_bar_tp{
     position: relative;
-    top: 0;
-    border: 5px solid lightslategray;
-    background-color: lightslategray;
+    top: -8px;
+    border: 1px solid rgba(255, 0, 0, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
     max-height: 160px;
 }
 
@@ -43,7 +43,7 @@ body {
     padding-right: 25px;
     padding-left: 25px;
 }
-@media (max-width: 991px) {
+@media (max-width: 700px) {
     .nav_bar_tp_ctn_li {
       padding-right: 15px;
       padding-left: 15px;
@@ -72,32 +72,46 @@ body {
 .nav_bar_link:hover{
     border-bottom: 5px solid white;
 }
-img{
-    border-radius: 50%;
+.port_img1{
+    border-radius: 10%;
 }
-@media screen and (max-width:900px){
-  img{
-    margin-left: -95%;
-  }
+@media screen and (max-width:100px){
+  .profile_img> img{
+    margin-top: 10px;
+ }
+ 
+}
+@media (max-width:900px){
+  .profile_img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+ }
+ 
+}
+.profile_img > img{
+  border-radius: 50%;
 }
 .profile_img{
    margin-left: auto;
-   margin-right: auto;
    width: 67%;
-   margin-top: 5px;
+   margin-top: 15px;
 }
 /* body text containing name and what i do */
 .tx_bd{
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
 .tx_bd_under{
+  font-family: sans-serif;
   text-align: center;
   opacity: 0.3;
   transition: 0.3s;
   font-size: 1.5rem;
 }
 .abt_me_inner{
+  font-family: sans-serif;
   opacity: 0.6;
   padding-left: 20px;
   padding-right: 20px;
@@ -144,6 +158,9 @@ address {
   margin-bottom: 50px;
   padding-left: 20px;
 }
+.contact_box{
+  display: flex;
+}
 
 .tm-address-box {
   max-width: 100%;
@@ -168,19 +185,64 @@ address {
   margin-bottom: 25px;
   text-decoration: none;
 }
-
 .space{
-  height: 300px;
+  width: 300%;
+  display: flex;
 }
+@media  (max-width: 700px) { 
+  .tm-address-box{
+    flex-flow: row wrap;
+  }
+  .space{
+    flex-flow: row wrap;
+  }
+  .contact_box{
+    flex-flow: row wrap;
+  }
+}
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+input[type=submit] {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.container_form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
 
 /* my work at home page */
 .work_do{
-  padding-left: 40px;
   border: 20px solid white;
   text-decoration: none;
+  font-size: 95%;
+
 }
 /* content flow */
-@media screen and (max-width:900px){
+@media screen and (max-width:700px){
   .work{
     flex-flow: row wrap; }
 }
@@ -193,15 +255,24 @@ button:hover {
   background-color:  slategray;
 }
 button{
-  background-color: white;
   cursor: pointer;
+
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.8);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
 }
 /* footer */
 .footer_bt{
   position: relative;
-  bottom: 0;
-  border: 5px solid lightslategray;
-  background-color: lightslategray;
+  bottom: -8px;
+  border: 1px solid rgba(255, 0, 0, 0.8);
+  background-color:rgba(255, 0, 0, 0.8);
   max-height: 160px;
   width: 100%;
   max-width: 1200px;
@@ -209,31 +280,34 @@ button{
   margin-left: auto;
 }
 /* portfolio content */
-@media screen and (max-width:900px){
+@media screen and (max-width:700px){
   .port_ctn1{
     flex-flow: row wrap; }
     .port_ctn2{
       flex-flow: row wrap; }
       .port_ctn3{
         flex-flow: row wrap; }
-
-
+    .port_img1{
+      padding-left: 10%;
+    }
 }
+.port_img1{
+  height: 200px;
+  width: 200px;
+}
+
 .port_ctn_ln1  {
   border: 20px solid white;
+  padding-left: 60px;
 }
 .port_ctn_ln2{
   border: 20px solid white;
+  padding-left: 60px;
 }
-.port_ctn_ln3{
-  border: 20px solid white;
-}
+
 .port_ctn1{
   display: flex;
 }
 .port_ctn2{
-  display: flex;
-}
-.port_ctn3{
   display: flex;
 }
