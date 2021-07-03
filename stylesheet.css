@@ -86,9 +86,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    
- }
- 
+  }
+}
+@media (max-width:900px){
+  .profile_img{
+    padding-right: 38%;
+  }
 }
 .profile_img > img{
   border-radius: 50%;
@@ -287,9 +290,6 @@ button{
       flex-flow: row wrap; }
       .port_ctn3{
         flex-flow: row wrap; }
-    .port_img1{
-      padding-left: 10%;
-    }
 }
 .port_img1{
   height: 200px;
